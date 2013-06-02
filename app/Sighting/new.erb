@@ -1,0 +1,70 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>New <%= @sighting.title %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :create %>">
+      <input type="hidden" name="id" value="<%= @sighting.object %>"/>
+
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[id]" class="fieldLabel">Id</label>
+            <input type="text" id="sighting[id]" name="sighting[id]" <%= placeholder("Id") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[sighted_at]" class="fieldLabel">Sighted at</label>
+            <input type="text" id="sighting[sighted_at]" name="sighting[sighted_at]" <%= placeholder("Sighted at") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[reported_at]" class="fieldLabel">Reported at</label>
+            <input type="text" id="sighting[reported_at]" name="sighting[reported_at]" <%= placeholder("Reported at") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[location]" class="fieldLabel">Location</label>
+            <input type="text" id="sighting[location]" name="sighting[location]" <%= placeholder("Location") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[shape]" class="fieldLabel">Shape</label>
+            <input type="text" id="sighting[shape]" name="sighting[shape]" <%= placeholder("Shape") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[duration]" class="fieldLabel">Duration</label>
+            <input type="text" id="sighting[duration]" name="sighting[duration]" <%= placeholder("Duration") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[description]" class="fieldLabel">Description</label>
+            <input type="text" id="sighting[description]" name="sighting[description]" <%= placeholder("Description") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[coord]" class="fieldLabel">Coord</label>
+            <input type="text" id="sighting[coord]" name="sighting[coord]" <%= placeholder("Coord") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[links]" class="fieldLabel">Links</label>
+            <input type="text" id="sighting[links]" name="sighting[links]" <%= placeholder("Links") %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="sighting[source]" class="fieldLabel">Source</label>
+            <input type="text" id="sighting[source]" name="sighting[source]" <%= placeholder("Source") %> />
+          </div>
+      
+
+      <input type="submit" value="Create"/>
+    </form>
+  </div>
+
+</div>

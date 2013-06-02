@@ -1,0 +1,24 @@
+#sdk: "/usr/local/share/gems/gems/rhodes-3.5.1.12"
+sdkversion: 3.5.0
+name: ufohunters-rhodes
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.ufohunters-rhodes
+  BundleURLScheme: ufohunters-rhodes
+wp:
+  productid: 'ba0c5a70-aadf-0130-6737-3888e389d4de'
+symbian:
+  uid: '0xe9507d0d'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]

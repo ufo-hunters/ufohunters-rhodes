@@ -1,0 +1,51 @@
+<div data-role="page" data-add-back-btn="false">
+
+  <div data-role="header" data-position="inline">
+    <h1><%= @sighting["location"] %></h1>
+    <a href="<%= url_for :action => :index %>" class="ui-btn-left" data-icon="arrow-l" data-direction="reverse">
+      Back
+    </a>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview">
+      
+          <li>
+            <div class="itemLabel">Location</div>
+            <div class="itemValue"><%= @sighting["location"] %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Sighted at</div>
+            <div class="itemValue"><%= @sighting["sighted_at"] %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Reported at</div>
+            <div class="itemValue"><%= @sighting["reported_at"] %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Shape</div>
+            <div class="itemValue"><%= @sighting["shape"] %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Duration</div>
+            <div class="itemValue"><%= @sighting["duration"] %></div>
+          </li>
+      
+          <li>
+            <div class="itemLabel">Source</div>
+            <div class="itemValue"><%= @sighting["source"] %></div>
+          </li>
+
+          <li>
+            <div class="itemLabel">Report</div>
+            <div class="itemValue"><%= @sighting["description"] %></div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>
