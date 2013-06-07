@@ -25,6 +25,25 @@ class SightingController < Rho::RhoController
 
   end
 
+  def map_it
+
+    map_params = {
+     :provider => 'OSM',
+     :settings => {:map_type => "hybrid",:region => [@params['latitude'], @params['longitude'], 0.2, 0.2],
+                   :zoom_enabled => true,:scroll_enabled => true,:shows_user_location => false},
+     :annotations => [{
+                      :latitude => @params['latitude'], 
+                      :longitude => @params['longitude'], 
+                      :title => @params['location'], 
+                      :subtitle => @params['sighted_at']
+                      }]
+    }
+    MapView.create map_params
+
+    #redirect :action => :index
+
+  end
+
 =begin
   # GET /Sighting/new
   def new

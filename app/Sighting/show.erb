@@ -44,6 +44,13 @@
             <div class="itemLabel">Report</div>
             <div class="itemValue"><%= @sighting["description"] %></div>
           </li>
+
+          <li>
+            <a href="<%= url_for :action => :map_it, :query => {:id => @sighting["_id"], :longitude => @sighting["coord"][0], :latitude => @sighting["coord"][1], :location => @sighting["location"], :sighted_at => @sighting["sighted_at"]}%>">
+              <span class="title">Show on map</span>
+              <span class="disclosure_indicator"></span>
+            </a>
+          </li>
       
     </ul>
   </div>

@@ -6,6 +6,8 @@ vendor: rhomobile
 build: debug
 bbver: 4.6
 applog: rholog.txt
+capabilities:
+  - gps
 iphone:
   configuration: Release
   sdk: iphonesimulator5.0
@@ -20,5 +22,6 @@ symbian:
   uid: '0xe9507d0d'
 android:
   version: 2.1
+  mapping: yes
 
 extensions: ["json", "another-extension"]

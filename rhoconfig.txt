@@ -1,5 +1,5 @@
 # startup page for your application
-start_path = '/app/Sighting'
+start_path = '/app'
 
 # path to the options page (in this case handled by javascript)
 options_path = '/app/Settings'
@@ -50,7 +50,7 @@ LastVisitedPage = ''
 
 # sync server url, typically this will look like 'http://<hostname>:<port>/application'
 # for example: 'http://localhost:9292/application'
-syncserver = 'http://localhost:9292/application'
+#syncserver = 'http://localhost:9292/application'
 
 # geo location inactivity timeout (in seconds)
 #geo_location_inactivity_timeout = 30
@@ -89,3 +89,6 @@ jqtouch_mode=1
 splash_screen='zoom'
 
 use_bb_full_browser=6
+
+# OSM tile map server
+OSM_map_url_roadmap = 'http://otile1.mqcdn.com/tiles/1.0.0/map'

@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>UfohuntersRhodes</title>
+    <title>UFO Hunters</title>
 
     <% is_bb6 = System::get_property('platform') == 'Blackberry' && (System::get_property('os_version').split('.')[0].to_i >= 6) %>
 
@@ -33,8 +33,8 @@
                 //$.mobile.page.prototype.options.addBackBtn = true;
 
                 // You can disable (with false value) or change page loading message
-                $.mobile.loadingMessage = false;
-                //$.mobile.loadingMessage = "loading"; // it is default value
+                $.mobile.loadingMessage = true;
+                $.mobile.loadingMessage = "loading"; // it is default value
 
                 // For documented init options look here:
                 // http://jquerymobile.com/demos/1.0.1/docs/api/globalconfig.html
@@ -56,6 +56,12 @@
         </script>
         <% if System::get_property('platform') == 'WP7' %>
           <script type="text/javascript" charset="utf-8" src="/public/js/jquery-wp7-patch.js"></script>
+        <% end %>
+        <% if System::get_property('platform') == 'APPLE' || System::get_property('platform') == 'ANDROID' %>
+          <script type="text/javascript" charset="utf-8" src="/public/js/rhogeolocation.js"></script>
+        <% end %>
+        <% if System::get_property('platform') == 'WINDOWS' && System::get_property('webview_framework') !~ /^WEBKIT/ %>
+          <script type="text/javascript" charset="utf-8" src="/public/js/rhogeolocation-wm.js"></script>
         <% end %>
         <script type="text/javascript" charset="utf-8" src="/public/jqmobile/jquery.mobile-1.0.1.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="/public/js/jqmobile-patch.js"></script>
