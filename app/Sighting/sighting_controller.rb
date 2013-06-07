@@ -40,7 +40,7 @@ class SightingController < Rho::RhoController
     }
     MapView.create map_params
 
-    #redirect :action => :index
+    redirect :action => :index
 
   end
 
